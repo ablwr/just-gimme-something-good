@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.image {
+  overflow: hidden;
+  height: 300px;
+}
+
+.header {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  line-height: 1.1;
+  font-size: 36px;
+  letter-spacing: 5px;
+}
+
+.good {
+  font-size: 198px;
+}
+
+.center {     
+    height: 30px; 
+    width: 639px;  
+    text-align: center;  
+    bottom: 0; 
+    left:50%; 
+    margin:0 0 0 -320px;
+    }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 100px;
+}
+
+.big-button {
+  font-size: 190px;
+  color: white;
+}
+
+.medium-button i {
+  font-size: 100px;
+  color: white;
+  padding: 60px 60px 60px 60px;
+}
+
+.fa {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.fa:hover, .fa:focus, .fa:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+
+.video-info {
+  display:none;
+}
