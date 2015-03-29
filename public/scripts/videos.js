@@ -57,7 +57,7 @@ var StaffPicks = React.createClass({
             <div id="description">
                 <h2>{this.state.title}</h2>
                 <h4>by <a href={this.state.user_url}>{this.state.user_name}</a></h4>
-                <p>{this.state.description.replace(/(<([^>]+)>)/gi, "").substring(0, 250)} <a href={this.state.url}>...</a></p>
+                <p>{this.state.description.replace(/(<([^>]+)>)/gi, "").substring(0, 250)} <a href={this.state.url}>... [More Info]</a></p>
               </div>
               
               <div id="stats">

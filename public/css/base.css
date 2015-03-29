@@ -89,7 +89,7 @@ h1 {
 
 li .fa, li .fa:hover, li .fa:focus, li .fa:active {
   font-size: 36px;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 0px;
 }
 
 #footer {
@@ -134,20 +134,20 @@ hr {
 }
 
 #description {
-  width: 270px;
+  width: 480px;
   float: left;
   padding: 5px 15px;
 }
 
 #stats {
-  width: 274px;
+  width: 180px;
   float: left;
-  padding: 5px 15px;
+  padding: 5px 30px;
   margin: 0px 5px 5px 5px;
 }
 
 #tags {
-  width: 250px;
-  padding: 5px 15px;
+  width: 180px;
+  padding: 5px 10px;
   float: left;
 }
