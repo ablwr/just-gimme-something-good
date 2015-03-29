@@ -83,3 +83,18 @@ h1 {
 .video-info {
   display:none;
 }
+
+#footer {
+  text-align:center;
+  text-decoration: none;
+  color:white;
+}
+
+#footer a:link,
+#footer a:visited,
+#footer a:hover,
+#footer a:active, {
+  text-align:center;
+  text-decoration: none;
+  color:white;
+}
