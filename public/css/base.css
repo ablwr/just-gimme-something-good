@@ -64,7 +64,7 @@ h1 {
 .medium-button i {
   font-size: 100px;
   color: white;
-  padding: 60px 100px 60px 100px;
+  padding: 60px 120px 60px 100px;
 }
 
 .fa {
@@ -79,6 +79,7 @@ h1 {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+
 .fa:hover, .fa:focus, .fa:active {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
@@ -86,10 +87,16 @@ h1 {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
+li .fa, li .fa:hover, li .fa:focus, li .fa:active {
+  font-size: 36px;
+  padding: 0 0 0 20px;
+}
+
 #footer {
   text-align:center;
   text-decoration: none;
   color:white;
+  padding-top:15px;
 }
 
 #footer a:link,
@@ -116,6 +123,14 @@ hr {
   font-family: 'Open Sans', sans-serif;
   text-align: left;
   color: white;
+}
+
+.video-info h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.video-info li {
+  font-size: 36px;
 }
 
 #description {

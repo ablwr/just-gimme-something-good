@@ -57,16 +57,16 @@ var StaffPicks = React.createClass({
             <div id="description">
                 <h2>{this.state.title}</h2>
                 <h4>by <a href={this.state.user_url}>{this.state.user_name}</a></h4>
-                <p>{this.state.description.substring(0, 250)} <a href={this.state.url}>...</a></p>
+                <p>{this.state.description.replace(/(<([^>]+)>)/gi, "").substring(0, 250)} <a href={this.state.url}>...</a></p>
               </div>
               
               <div id="stats">
                 <h2>Stats</h2>
                 <ul>
-                  <li>Likes: {this.state.likes}</li>
-                  <li>Views: {this.state.plays}</li>
-                  <li>Comments: {this.state.comments}</li>
-                  <li>Seconds: {this.state.duration}</li>
+                  <li><i className="fa fa-thumbs-up" title="Likes"></i> {this.state.likes}</li>
+                  <li><i className="fa fa-eye" title="Views"></i> {this.state.plays}</li>
+                  <li><i className="fa fa-comments" title="Comments"></i> {this.state.comments}</li>
+                  <li><i className="fa fa-clock-o" title="Seconds"></i> {this.state.duration}</li>
                 </ul>
               </div>
 
