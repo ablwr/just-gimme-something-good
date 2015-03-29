@@ -28,7 +28,7 @@ var StaffPicks = React.createClass({
     return (
       <div>
       <div className="videos">
-        <iframe src={ "https://player.vimeo.com/video/" + this.state.id} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="iframe" src={ "https://player.vimeo.com/video/" + this.state.id} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <div className="medium-button">
         <i className="fa fa-info-circle"></i> 
