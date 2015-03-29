@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: 'Abril Fatface', cursive;
   color: white;
   text-align: center;
   overflow-x: hidden;
@@ -57,7 +56,7 @@ h1 {
 .medium-button i {
   font-size: 100px;
   color: white;
-  padding: 60px 60px 60px 60px;
+  padding: 60px 100px 60px 100px;
 }
 
 .fa {
@@ -79,11 +78,6 @@ h1 {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
-
-.video-info {
-  display:none;
-}
-
 #footer {
   text-align:center;
   text-decoration: none;
@@ -97,4 +91,40 @@ h1 {
   text-align:center;
   text-decoration: none;
   color:white;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ffffff;
+}
+
+.video-info {
+  display: none;
+}
+
+.video-info * {
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  color: white;
+}
+
+#description {
+  width: 270px;
+  float: left;
+  padding: 5px 15px;
+}
+
+#stats {
+  width: 274px;
+  float: left;
+  padding: 5px 15px;
+  margin: 0px 5px 5px 5px;
+}
+
+#tags {
+  width: 250px;
+  padding: 5px 15px;
+  float: left;
 }

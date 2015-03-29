@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-$( ".fa-arrow-circle-o-down" ).click(function() {
-    $('html,body').animate({
-    scrollTop: $("#player").offset().top
-    }, 1000); 
-  });
-
 $( ".fa-info-circle" ).click(function() {
     $('.video-info').show();
   });
@@ -16,6 +10,12 @@ $( ".fa-refresh" ).click(function() {
 
 $( ".fa-chevron-right" ).click(function() {
     location.reload();
+  });
+
+$(".fa-arrow-circle-o-down").click(function() {
+    $('html,body').animate({
+    scrollTop: $("#videos").offset().top
+    }, 1000); 
   });
 
 });

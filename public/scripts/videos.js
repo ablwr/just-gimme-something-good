@@ -5,7 +5,16 @@ var StaffPicks = React.createClass({
     return {
       title: '',
       id: '',
-      url: ''
+      url: '',
+      description: '',
+      user_name: '',
+      user_url: '',
+      likes: '',
+      plays: '',
+      comments: '',
+      duration: '',
+      tags: ''
+
     };
   },
 
@@ -17,7 +26,15 @@ var StaffPicks = React.createClass({
         this.setState({
           title: lastPick.title,
           id: lastPick.id,
-          url: lastPick.url
+          url: lastPick.url,
+          description: lastPick.description,
+          user_name: lastPick.user_name,
+          user_url: lastPick.user_url,
+          likes: lastPick.stats_number_of_likes,
+          plays: lastPick.stats_number_of_plays,
+          comments: lastPick.stats_number_of_comments,
+          duration: lastPick.duration,
+          tags: lastPick.tags
         });
       }
     }.bind(this));
@@ -27,16 +44,35 @@ var StaffPicks = React.createClass({
 
     return (
       <div>
-      <div className="videos">
-        <iframe id="iframe" src={ "https://player.vimeo.com/video/" + this.state.id} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-      <div className="medium-button">
-        <i className="fa fa-info-circle"></i> 
-        <i className="fa fa-refresh"></i> 
-        <i className="fa fa-chevron-right"></i>
-      </div>
-      <div className="video-info">
-        {this.state.title}
+        <div className="videos">
+          <iframe id="iframe" src={ "https://player.vimeo.com/video/" + this.state.id} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="medium-button">
+          <i className="fa fa-info-circle"></i> 
+          <i className="fa fa-refresh"></i> 
+          <i className="fa fa-chevron-right"></i>
+        </div>
+        <div className="video-info">
+            <div id="description">
+                <h2>{this.state.title}</h2>
+                <h4>by <a href={this.state.user_url}>{this.state.user_name}</a></h4>
+                <p>{this.state.description.substring(0, 250)} <a href={this.state.url}>...</a></p>
+              </div>
+              
+              <div id="stats">
+                <h2>Stats</h2>
+                <ul>
+                  <li>Likes: {this.state.likes}</li>
+                  <li>Views: {this.state.plays}</li>
+                  <li>Comments: {this.state.comments}</li>
+                  <li>Seconds: {this.state.duration}</li>
+                </ul>
+              </div>
+
+              <div id="tags">
+                <h2>Tags</h2>
+                <p>{this.state.tags}</p>
+              </div>
         </div>
       </div>
 
