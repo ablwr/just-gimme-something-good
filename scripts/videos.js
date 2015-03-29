@@ -1,6 +1,5 @@
 /** @jsx React.DOM */
 
-
 var StaffPicks = React.createClass({
   getInitialState: function() {
     return {
@@ -59,7 +58,6 @@ var StaffPicks = React.createClass({
                 <h4>by <a href={this.state.user_url}>{this.state.user_name}</a></h4>
                 <p>{this.state.description.replace(/(<([^>]+)>)/gi, "").substring(0, 250)} <a href={this.state.url}>... [More Info]</a></p>
               </div>
-              
               <div id="stats">
                 <h2>Stats</h2>
                 <ul>
@@ -69,14 +67,12 @@ var StaffPicks = React.createClass({
                   <li><i className="fa fa-clock-o" title="Seconds"></i> {this.state.duration}</li>
                 </ul>
               </div>
-
               <div id="tags">
                 <h2>Tags</h2>
                 <p>{this.state.tags}</p>
               </div>
         </div>
       </div>
-
     );
   }
 });
@@ -89,34 +85,32 @@ React.render(
 // Get those buttons a'working
 
 $(document).ready(function() {
+  $( ".fa-info-circle" ).click(function() {
+      $('.video-info').show();
+    });
 
-$( ".fa-info-circle" ).click(function() {
-    $('.video-info').show();
+  $( ".fa-refresh" ).click(function() {
+      $('iframe').attr('src', ($('iframe').attr('src')+"?&autoplay=1"));
+    });
+
+  $( ".fa-chevron-right" ).click(function() {
+      location.reload();
+    });
+
+  $(".fa-arrow-circle-o-down").click(function() {
+      $('html,body').animate({
+      scrollTop: $("#videos").offset().top
+      }, 1000); 
+    });
+
+  $(window).scroll(function(){
+      var fromTopPx = 500;
+      var scrolledFromtop = $(window).scrollTop();
+      if(scrolledFromtop > fromTopPx){
+          $('#main').addClass('scrolled');
+      }else{
+          $('#main').removeClass('scrolled');
+      }
   });
-
-$( ".fa-refresh" ).click(function() {
-    $('iframe').attr('src', ($('iframe').attr('src')+"?&autoplay=1"));
-  });
-
-$( ".fa-chevron-right" ).click(function() {
-    location.reload();
-  });
-
-$(".fa-arrow-circle-o-down").click(function() {
-    $('html,body').animate({
-    scrollTop: $("#videos").offset().top
-    }, 1000); 
-  });
-
-$(window).scroll(function(){
-    var fromTopPx = 500;
-    var scrolledFromtop = $(window).scrollTop();
-    if(scrolledFromtop > fromTopPx){
-        $('#main').addClass('scrolled');
-    }else{
-        $('#main').removeClass('scrolled');
-    }
-});
-
 });
 
