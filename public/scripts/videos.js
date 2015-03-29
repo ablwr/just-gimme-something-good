@@ -81,11 +81,12 @@ var StaffPicks = React.createClass({
   }
 });
 
-
 React.render(
   <StaffPicks source="http://vimeo.com/api/v2/channel/staffpicks/videos.json" />,
   document.getElementById('videos')
 );
+
+// Get those buttons a'working
 
 $(document).ready(function() {
 
@@ -106,6 +107,16 @@ $(".fa-arrow-circle-o-down").click(function() {
     scrollTop: $("#videos").offset().top
     }, 1000); 
   });
+
+$(window).scroll(function(){
+    var fromTopPx = 500;
+    var scrolledFromtop = $(window).scrollTop();
+    if(scrolledFromtop > fromTopPx){
+        $('#main').addClass('scrolled');
+    }else{
+        $('#main').removeClass('scrolled');
+    }
+});
 
 });
 

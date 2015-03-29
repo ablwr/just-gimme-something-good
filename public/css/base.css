@@ -1,3 +1,11 @@
+html #main {
+    background:url(../static.gif) !important;
+}
+
+html #main.scrolled {
+    background:url(../static_static.jpg) !important;
+}
+
 body {
   margin: 0;
   color: white;
