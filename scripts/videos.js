@@ -45,7 +45,7 @@ var StaffPicks = React.createClass({
     return (
       <div>
         <div className="videos">
-          <iframe id="iframe" src={ "https://player.vimeo.com/video/" + this.state.id} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe id="iframe" src={ "https://player.vimeo.com/video/" + this.state.id + "?portrait=0&byline=0&title=0&badge=0"} width="500" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="medium-button">
           <i className="fa fa-info-circle"></i> 
@@ -90,7 +90,7 @@ $(document).ready(function() {
     });
 
   $( ".fa-refresh" ).click(function() {
-      $('iframe').attr('src', ($('iframe').attr('src')+"?&autoplay=1"));
+      $('iframe').attr('src', ($('iframe').attr('src')+"&autoplay=1"));
     });
 
   $( ".fa-chevron-right" ).click(function() {
